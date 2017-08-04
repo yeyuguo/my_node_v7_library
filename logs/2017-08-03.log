@@ -1,0 +1,83 @@
+[2017-08-03 16:32:22.315] [DEBUG] record - [31mcopy 命令运行命令有异常;[39m
+[2017-08-03 17:09:03.176] [DEBUG] record - [31mcopy 命令运行命令有异常;[39m
+[2017-08-03 17:09:27.027] [DEBUG] record - TypeError: fs.createReadStream(...).error is not a function
+    at Object._big_file (E:\GITDown\my-node-lessons\Files\copy.js:30:14)
+    at Object.main (E:\GITDown\my-node-lessons\Files\copy.js:54:18)
+    at Object.<anonymous> (E:\GITDown\my-node-lessons\Files\copy.js:60:6)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:420:7)
+[2017-08-03 17:13:12.688] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\Files\4.js'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\Files\\4.js' }
+[2017-08-03 17:13:48.880] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\Files\4.js'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\Files\\4.js' }
+[2017-08-03 17:14:03.164] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\Files\4.js'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\Files\\4.js' }
+[2017-08-03 17:14:22.327] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\Files\4.js'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\Files\\4.js' }
+[2017-08-03 17:14:40.731] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\Files\4.js'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\Files\\4.js' }
+[2017-08-03 17:14:50.809] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\Files\4.js'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\Files\\4.js' }
+[2017-08-03 17:15:01.870] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\Files\4.js'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\Files\\4.js' }
+[2017-08-03 17:15:41.119] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\Files\4.js'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\Files\\4.js' }
+[2017-08-03 17:16:08.134] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\Files\4.js'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\Files\\4.js' }
+[2017-08-03 17:17:34.783] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\Files\4.js'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\Files\\4.js' }
+[2017-08-03 17:22:44.606] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\packag.json'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\packag.json' }
+[2017-08-03 17:22:57.616] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\packag.json'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\packag.json' }
+[2017-08-03 17:23:09.523] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'E:\GITDown\my-node-lessons\packag.json'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'E:\\GITDown\\my-node-lessons\\packag.json' }
+[2017-08-03 17:27:34.842] [DEBUG] record - { Error: ENOENT: no such file or directory, open 'e:\GITDown\my-node-lessons\packag.json'
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'e:\\GITDown\\my-node-lessons\\packag.json' }
