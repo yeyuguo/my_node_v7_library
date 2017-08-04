@@ -15,11 +15,11 @@ var copy = {
         try{
             var file_content = fs.readFileSync(src,{encoding: 'utf8'});
             fs.writeFileSync(dst,file_content);
-            log(colors.rainbow('copy is success'))
+            print.success('copy is success')
         }catch(e){
             var msg = chalk.red('copy 命令运行命令有异常;')
             logger.debug(msg)
-            log(colors.red(e))
+            print.error(e)
         }
     },
     _big_file:function(src,dst){
@@ -28,11 +28,11 @@ var copy = {
             file_content.pipe(fs.createWriteStream(dst))
             // 必须分开写，否则监测 error 的函数会报错
             file_content.on('error',function(e){
-                log(colors.red(e))
+                print.error(e)
                 logger.debug(e)
             })
             file_content.on('close',function(){
-                log(colors.rainbow('copy is success'))
+                print.success('copy is success')
             })
             
         }catch(e){
@@ -67,8 +67,8 @@ var copy = {
         }
     }
 }
-// print.log(copy._big_file)
-print.log(copy._big_file)
+
+// print.info(copy._big_file)
 
 copy.main({
     src:process.argv.slice(2)[0],
