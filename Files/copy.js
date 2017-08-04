@@ -2,7 +2,10 @@ var fs = require('fs')
 const chalk = require('chalk'); //https://github.com/chalk/chalk
 const colors = require('colors') // 有多个颜色值 
 const logger = require('../LogConfig').logger
-const log = console.log
+const print = require('../Print')
+
+var _big_file = Symbol('该函数为大文件做copy')
+var _small_file = Symbol('该函数为小文件做copy')
 
 var copy = {
     _small_file:function(src,dst){
@@ -37,22 +40,41 @@ var copy = {
             logger.debug(e)
         }
     },
-    main:function(arguments){
+    main:function(object){
+        
         // log(colors.rainbow(logger))
         /*
+        {
+            src:'',  //源文件
+            dst:'',  //复制到的目标路径
+            small   // 判断是否为小文件
+        }
         由于 argv[0] 固定等于 NodeJS 执行程序的绝对路径，argv[1] 固定等于主模块的绝对路径，因此第一个命令行参数从 argv[2] 这个位置开始。
         */
         var flag = Symbol('标记是大文件还是小文件');
-        flag = arguments[2]
+        // flag = arguments[2]
+        // if(flag && flag == 'small'){
+        //     this._small_file(arguments[0],arguments[1])
+        // }else{
+        //     this._big_file(arguments[0],arguments[1])
+        // }
+        
+        flag = object.small
         if(flag && flag == 'small'){
-            this._small_file(arguments[0],arguments[1])
+            this._small_file(object.src,object.dst)
         }else{
-            this._big_file(arguments[0],arguments[1])
+            this._big_file(object.src,object.dst)
         }
     }
 }
+// print.log(copy._big_file)
+print.log(copy._big_file)
 
-copy.main(process.argv.slice(2));
+copy.main({
+    src:process.argv.slice(2)[0],
+    dst:process.argv.slice(2)[1],
+    small:process.argv.slice(2)[2]
+});
 
 // exports.copy.main(process.argv);
 module.exports = copy

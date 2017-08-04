@@ -19,7 +19,11 @@ var print = {
     console.info: 绿色;
     console.debug: 蓝色;
     console.error: 红色;
-    nodejs console：
+    bgBlack: 做统计使用
+    bgRed: 报错或追踪
+    red : 记录报错信息
+
+    nodejs console 函数： 
     Console={
         log: [Function: bound log],
         info: [Function: bound log],
@@ -33,8 +37,11 @@ var print = {
         Console: [Function: Console] 
     }
     */
-    log:(data)=>{
+    success:(data)=>{
         console.log(colors.rainbow(data));
+    },
+    log:(data)=>{
+        console.log(colors.bgBlue(data));
     },
     info:(data)=>{
         console.info(colors.green(data));
@@ -45,7 +52,7 @@ var print = {
     },
     error:(data)=>{
         // 用于输出错误信息
-        console.error(colors.red(data));
+        console.error(colors.bgRed('ERROR is:'),colors.red(data));
     },
     dirxml:(data)=>{
         // 显示 dom节点的树结构
@@ -57,7 +64,7 @@ var print = {
     },
     count:(n)=>{
         // 显示函数被执行多少次，可以自加
-        console.count(colors.bgRed(n))
+        console.count(colors.bgBlack(n))
     },
     dir:(obj)=>{
         // 打印出对象的 完整结构，除函数内容
