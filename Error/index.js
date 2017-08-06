@@ -27,4 +27,4 @@ var errors = {
 }
 
 
-exports.errors = errors;
+module.exports = errors
