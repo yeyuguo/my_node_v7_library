@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        html{
+             font-size: 312.5%;   
+            /* 1rem =50px  */
+            height: 100%;
+        }
+         body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: inherit;
+        } 
+        
+        #container{
+            border:0.01rem solid #444;
+            border-radius: 0.1rem;
+            width: 10rem;
+            height: 10rem;
+            display: flex;
+            align-content: center;
+            /* margin:auto; */
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+    /*
+     参考文章：https://developer.mozilla.org/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB
+    */
+    var indexDB = {
+        dbName:'',
+        sourceData:()=>{
+            const customerData = [
+                { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
+                { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
+            ];
+            return customerData
+        },
+        createDB:()=>{
+            var request = window.indexedDB.open("MyTestDatabase",3); 
+            /*
+            第二参数：数据库版本号，与webSQL一样；
+            返回正确：IDBDatabase 对象
+            返回错误：IDBRequest 对象
+            */
+            request.onerror = function(event) {
+                console.log('创建错误事务：',event)
+                console.log('错误信息：',event.currentTarget.error.message)
+            }
+            request.onsuccess = function(event) {
+                console.log('创建正确事务:',event)
+                console.log('返回的结果：',request.result)
+            }
+        },
+        saveToDB:()=>{
+
+        },
+        getFromDB:()=>{},
+        
+    }
+    window.onload = function(){
+        if (!window.indexedDB) {
+            console.warn("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.")
+        }else{
+            indexDB.createDB()
+        }
+    }
+
+    
+    </script>
+</body>
+</html>

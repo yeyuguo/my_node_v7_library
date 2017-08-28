@@ -18,6 +18,7 @@ log4js.configure({
     categories: { default: { appenders: ['console','record'], level: 'all' } },
 })
 
+// 引用： logger = require('...').logger
 exports.logger  = log4js.getLogger('record')
 /*
 https://github.com/nomiddlename/log4js-node
